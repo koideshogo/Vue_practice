@@ -1,3 +1,4 @@
+<!-- <template>内はHTMLを書く所 -->
 <template>
   <div class="container">
     <div>
@@ -27,7 +28,7 @@
     </div>
   </div>
 </template>
-
+<!-- script内はJSを書く所-->
 <script>
 import Logo from '~/components/Logo.vue'
 
@@ -37,6 +38,9 @@ export default {
   }
 }
 </script>
+
+
+<!-- style内はJSを書く所-->
 
 <style>
 .container {
