@@ -1,19 +1,38 @@
 <!-- <template>内はHTMLを書く所 -->
 <template>
   <div class="container">
-    <messages />
+    <div class="chats-layout">
+      <messages />
+    </div>
+    <div class="input-layout">
+    </div>
   </div>
 </template>
 <!-- script内はJSを書く所-->
 <script>
 import Messages from '~/components/Messages.vue'
+import ChatForm from '~/components/ChatForm.vue'
 
 export default {
   components: {
-    Messages
+    Messages,
+    ChatForm
   }
 }
 </script>
 <!-- style内はJSを書く所-->
-<style>
+<style scpoed>
+.container {
+  height: 100%;
+}
+
+.chats-layout {
+  overflow: scroll;
+  height: 90%;
+}
+
+.input-layout {
+  height: 10%;
+}
+
 </style>
