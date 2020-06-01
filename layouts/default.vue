@@ -3,7 +3,7 @@
     <div class="sidebar">
       <p>チャンネル一覧</p>
       <p v-for="chanel in chanels">
-        <nuxt-link :to="`/chanels/${chanels.id}`">{{ chanel.name}}</nuxt-link>
+        <nuxt-link :to="`/chanels/${chanels.id}`">{{ chanel.name }}</nuxt-link>
       </p>
     </div>
     <div class="main-content">
@@ -27,7 +27,6 @@ export default {
         querySnapshot.forEach((doc) => {
           this.chanels.push({id: doc.id, ...doc.data()})
         })
-        console.log(this.chanels)
       })
   }
 }
