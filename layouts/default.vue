@@ -25,9 +25,9 @@ export default {
     db.collection('chanels').get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-          this.chanels.push(doc.data())
+        this.chanels.push({id: doc.id, ...doc.data()})
+        
         })
-        console.log(this.chanels)
       })
   }
 }
