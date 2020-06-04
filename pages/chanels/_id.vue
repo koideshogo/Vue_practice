@@ -10,19 +10,15 @@
 </template>
 
 <script>
-import Messages from '~/components/Messages.vue'
-import ChatForm from '~/components/ChatForm.vue'
+  import Messages from '~/components/Messages.vue'
+  import ChatForm from '~/components/ChatForm.vue'
 
-export default {
- components: {
-   Messages,
-   ChatForm
- },
- mounted () {
-   const channelId = this.$route.params.id
-   db.collection('chanels').doc(chanelId).collection('messages')
- }
-}
+  export default {
+  components: {
+    Messages,
+    ChatForm
+  }
+  }
 </script>
 
 <style scoped>
